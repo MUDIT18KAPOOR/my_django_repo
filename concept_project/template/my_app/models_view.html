@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DB details</title>
+    <link rel="stylesheet" href="{% static "css/mysheet.css" %}"/>
+</head>
+<body>
+
+<div class="container">
+
+    {% if id %}
+    {% for x in id %}
+     <ol>
+         <li>ID :</li>
+         <ul>
+             <li> {{ x.top_name}} </li>
+         </ul>
+     </ol>
+    {% endfor %}
+    {% else %}
+    <p>No Records Found !!</p>
+    {% endif %}
+
+    {% if detail %}
+    <table >
+        <thead>
+          <th> name: </th>
+          <th> location : </th>
+          <th> Contacts : </th>
+        </thead>
+        {% for y in detail %}
+        <tr>
+            <td>{{ y.name }}</td>
+            <td>{{ y.location }}</td>
+            <td>{{ y.contact }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No Records Found !!</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

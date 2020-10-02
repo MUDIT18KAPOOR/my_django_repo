@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static "css/mysheet.css" %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to Home Page !!</h1>
+        {{ insert_me }}
+        <p>Please use /form ext. to view the Form Page !!</p>
+        <p>Please use /admin to View the admin Page !!</p>
+        <p>Please use /model to View the Model Page !!</p>
+    </div>
+
+
+    <img src="{% static "images/my_pic.JPG" %}"/>
+
+<div class="container">
+    <h2>Visit Again !!</h2>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
